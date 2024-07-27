@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>Materi DOM</h1>
+</body>
+<script>
+    // console.log("Hello") 
+    // console.warn("Warning!") /*memberikan fungsi warning di web*/
+    // console.error("Error!!") /*memberikan fungsi error di web*/
+    // alert("Love u")
+    // confirm("Are you sure want to continue?")
+    prompt("Enter your age") /*menyimpan informasi tidak hanya yes or no*/
+    var age = prompt("Enter your age") /*membuat komputer mengingat informasi yang disimpan sebelumnya*/
+    alert("Umur kamu adalah..."+age)
+    prompt("Enter your name")
+    var h1El =  document.querySelector('h1') /* membuat kita tidak capek mengulang documentquery selector,contoh dibawah*/
+    var name = prompt("Enter your name")
+    if (name) {
+        var agree = confirm(name + "Are you sure want to continue?")
+        if (agree) {
+            alert("Okay,we will direct you to the web")
+            document.querySelector('h1').innerHTML ="Hello, "+name; /*mengubah teks dari h1 di body*/
+            document.querySelector('h1').style.color ="salmon"; /*document juga bisa mengubah style*/
+            document.querySelector('h1').style.textAlign ="center"
+            h1El.style.color = "salmon" /* contoh penggunaan dari var h1El*/
+
+        } 
+        else {
+            alert("Okay then")
+        }
+        
+    }
+    else {
+        alert("We dont know you...")
+    }      
+</script>
+</html>
